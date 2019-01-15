@@ -8,8 +8,8 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  // el: '#app', // 第一种方式挂载
   router,
   components: { App },
   template: '<App/>'
-})
+}).$mount('#app'); // 第二种方式挂载

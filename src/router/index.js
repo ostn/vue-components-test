@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import CopyRight from '@/components/CopyRight'
 
 Vue.use(Router)
 
@@ -8,13 +9,13 @@ export default new Router({
   routes: [
     {
       path: '/hello',
-      name: 'HelloWorld',
+      name: 'hello',
       component: HelloWorld
     },
 		{
 		  path: '/footer',
-		  name: 'HelloWorld',
-		  component: HelloWorld
+		  name: 'footer',
+		  component: CopyRight
 		}
   ]
 })

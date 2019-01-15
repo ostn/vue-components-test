@@ -1,7 +1,7 @@
 <template>
-	<view>
-		<a href="https://www.vjoke.cn" target="_blank">关于微笑话</a>
-	</view>
+	<div id="right">
+		<a href="###">关于微笑话</a>
+	</div>
 </template>
 
 <script>

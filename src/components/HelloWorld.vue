@@ -5,13 +5,28 @@
 </template>
 
 <script>
+import common from '@/utils/common'
+	
 export default {
   name: 'HelloWorld',
-  data () {
+  data: function() {
     return {
-      msg: 'Hello World!'
+      msg: 'Hello Vjoke!'
     }
-  }
+  },
+	mounted() {
+		debugger
+		console.log("HelloWorld.vue run mounted")
+	},
+	methods: {
+		aaa: function() {
+			console.log("aaaaa")
+		},
+		bbb() {
+			
+		}
+	},
+	mixins:[common.mixin],
 }
 </script>
 
