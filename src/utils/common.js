@@ -6,6 +6,9 @@ export default {
 			},
 	        sayWords: function(o){
 				console.log("我是mxins里面的方法" + o)
+			},
+			foo1() {
+				console.info("mixin组件方法")
 			}
 	    },
 		mounted: function(){

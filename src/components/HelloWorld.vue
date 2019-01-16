@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+		<input v-model="user" v-focus />
+		<button type="button" @click="foo1">哈哈哈</button>
   </div>
 </template>
 
@@ -9,21 +11,32 @@ import common from '@/utils/common'
 	
 export default {
   name: 'HelloWorld',
+	// 注册一个局部的自定义指令 v-focus
+	directives: {
+    // 注册一个局部的自定义指令 v-focus
+    focus: {
+      // 指令的定义
+      inserted: function (el) {
+        // 聚焦元素
+        el.focus()
+      }
+    }
+  },
   data: function() {
     return {
+			user: '',
       msg: 'Hello Vjoke!'
     }
   },
 	mounted() {
-		debugger
 		console.log("HelloWorld.vue run mounted")
 	},
 	methods: {
 		aaa: function() {
 			console.log("aaaaa")
 		},
-		bbb() {
-			
+		foo() {
+			console.info("hello组件方法")
 		}
 	},
 	mixins:[common.mixin],

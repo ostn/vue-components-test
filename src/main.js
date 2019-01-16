@@ -6,6 +6,24 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+//页面顶部进度条
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+
+router.beforeEach((to, from, next) => {
+    window.scroll(0,0);
+    NProgress.start();
+		
+		setTimeout(() => {
+			NProgress.done();
+		}, 4000)
+		
+});
+
+router.afterEach(() => {
+    NProgress.done();
+});
+
 /* eslint-disable no-new */
 new Vue({
   // el: '#app', // 第一种方式挂载

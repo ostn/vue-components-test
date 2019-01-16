@@ -1,12 +1,16 @@
 <template>
   <div id="app">
     <router-view/>
+		<copy-right></copy-right>
   </div>
 </template>
-
 <script>
+import CopyRight from './components/CopyRight'
 export default {
-  name: 'App'
+  name: 'App',
+	components: {
+		CopyRight,
+	}
 }
 </script>
 
